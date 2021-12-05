@@ -27,85 +27,85 @@ public class TaschenrechnerView {
         oneButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                anzeige.setText(oneButton.getText());
+                anzeige.setText(anzeige.getText() + oneButton.getText());
             }
         });
         twoButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                anzeige.setText(twoButton.getText());
+                anzeige.setText(anzeige.getText() + twoButton.getText());
             }
         });
         threeButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                anzeige.setText(threeButton.getText());
+                anzeige.setText(anzeige.getText() + threeButton.getText());
             }
         });
         fourButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                anzeige.setText(fourButton.getText());
+                anzeige.setText(anzeige.getText() + fourButton.getText());
             }
         });
         fiveButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                anzeige.setText(fiveButton.getText());
+                anzeige.setText(anzeige.getText() + fiveButton.getText());
             }
         });
         sixButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                anzeige.setText(sixButton.getText());
+                anzeige.setText(anzeige.getText() + sixButton.getText());
             }
         });
         sevenButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                anzeige.setText(sevenButton.getText());
+                anzeige.setText(anzeige.getText() + sevenButton.getText());
             }
         });
         eightButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                anzeige.setText(eightButton.getText());
+                anzeige.setText(anzeige.getText() + eightButton.getText());
             }
         });
         nineButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                anzeige.setText(nineButton.getText());
+                anzeige.setText(anzeige.getText() + nineButton.getText());
             }
         });
         plusButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                anzeige.setText(plusButton.getText());
+                anzeige.setText(anzeige.getText() + plusButton.getText());
             }
         });
         minusButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                anzeige.setText(minusButton.getText());
+                anzeige.setText(anzeige.getText() + minusButton.getText());
             }
         });
         multButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                anzeige.setText(multButton.getText());
+                anzeige.setText(anzeige.getText() + multButton.getText());
             }
         });
         divideButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                anzeige.setText(divideButton.getText());
+                anzeige.setText(anzeige.getText() + divideButton.getText());
             }
         });
         nullButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                anzeige.setText(nullButton.getText());
+                anzeige.setText(anzeige.getText() + nullButton.getText());
             }
         });
         deleteButton.addActionListener(new ActionListener() {
@@ -130,8 +130,5 @@ public class TaschenrechnerView {
         frame.pack();
         frame.setVisible(true);
     }
-
-    private void createUIComponents() {
-        // TODO: place custom component creation code here
-    }
+    
 }

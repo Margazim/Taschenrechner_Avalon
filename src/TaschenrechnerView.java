@@ -25,6 +25,7 @@ public class TaschenrechnerView {
 
 
     public TaschenrechnerView() {
+        model = new TaschenrechnerModel();
         oneButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {

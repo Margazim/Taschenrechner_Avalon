@@ -5,6 +5,9 @@ public class TaschenrechnerModel {
     private String operator;
 
     public int getErgebnis(){
+        if(operator==null){
+            return zweiterOperand;
+        }
         switch(operator){
             case "+":
                 return ersterOperand+zweiterOperand;

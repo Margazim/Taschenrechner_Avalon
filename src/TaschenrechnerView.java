@@ -21,6 +21,7 @@ public class TaschenrechnerView {
     private JButton multButton;
     private JButton divideButton;
     private JTextField anzeige;
+    private TaschenrechnerModel model;
 
 
     public TaschenrechnerView() {
@@ -81,25 +82,35 @@ public class TaschenrechnerView {
         plusButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                anzeige.setText(anzeige.getText() + plusButton.getText());
+                //anzeige.setText(anzeige.getText() + plusButton.getText());
+                model.setErsterOperand(getInt());
+                model.setOperator("+");
+                anzeige.setText(null);
+
             }
         });
         minusButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                anzeige.setText(anzeige.getText() + minusButton.getText());
+                model.setErsterOperand(getInt());
+                model.setOperator("-");
+                anzeige.setText(null);
             }
         });
         multButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                anzeige.setText(anzeige.getText() + multButton.getText());
+                model.setErsterOperand(getInt());
+                model.setOperator("*");
+                anzeige.setText(null);
             }
         });
         divideButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                anzeige.setText(anzeige.getText() + divideButton.getText());
+                model.setErsterOperand(getInt());
+                model.setOperator("/");
+                anzeige.setText(null);
             }
         });
         nullButton.addActionListener(new ActionListener() {
@@ -117,8 +128,10 @@ public class TaschenrechnerView {
         resultButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                String calculation = anzeige.getText();
-
+                model.setZweiterOperand(getInt());
+                anzeige.setText(String.valueOf(model.getErgebnis()));
+                anzeige.setText(null);
+                model.zuruecksetzen();
             }
         });
     }
@@ -130,5 +143,9 @@ public class TaschenrechnerView {
         frame.pack();
         frame.setVisible(true);
     }
-    
+
+    public int getInt(){
+        return Integer.parseInt(anzeige.getText());
+    }
+
 }

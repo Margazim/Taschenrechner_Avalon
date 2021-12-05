@@ -26,10 +26,10 @@ public class TaschenrechnerModel {
         operator = null;
     }
     public void  setErsterOperand(int opd){
-        this.zweiterOperand = opd;
+        this.ersterOperand = opd;
     }
     public void  setZweiterOperand(int opd){
-        this.ersterOperand = opd;
+        this.zweiterOperand = opd;
     }
     public void setOperator(String operator){
         this.operator = operator;

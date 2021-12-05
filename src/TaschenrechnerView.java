@@ -131,7 +131,6 @@ public class TaschenrechnerView {
             public void actionPerformed(ActionEvent e) {
                 model.setZweiterOperand(getInt());
                 anzeige.setText(String.valueOf(model.getErgebnis()));
-                anzeige.setText(null);
                 model.zuruecksetzen();
             }
         });
